@@ -121,3 +121,6 @@ button:focus-visible,input:focus-visible,select:focus-visible,.carat-wheel:focus
 .wheel-placeholder{display:flex;align-items:center;justify-content:center;scroll-snap-align:center;scroll-snap-stop:always;color:#5c6671;font-size:15px;font-style:italic}
 .gem-wheel .wheel-placeholder{height:44px}
 .treatment-wheel .wheel-placeholder{height:var(--treatment-row);font-size:17px}
+
+/* Leave space below the bottom-facing colour handle. */
+.colour-ring-readout{margin-top:30px}
