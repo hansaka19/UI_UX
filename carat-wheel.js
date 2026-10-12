@@ -8,7 +8,7 @@
   let syncing = false;
   const edits = [];
   const weightHint = document.querySelector('.carat-instruction');
-  weightHint.textContent = 'Scroll, or tap each number to edit';
+  weightHint.textContent = 'Scroll or tap to edit';
   document.querySelector('.carat-wheels').before(weightHint);
   function paint(index) {
     const wheel = wheels[index];

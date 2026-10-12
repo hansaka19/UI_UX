@@ -44,11 +44,11 @@ These values are invented, not current gem-market prices. Unknown details are ne
 
 ## Design and AI disclosure
 
-The UI implements the accepted SVG concept using large selection cards, numbered questions, visible units and plain explanations. It intentionally starts blank and hides the result until calculation, rather than copying the static screenshot's filled state. Phone status bars and home indicators belong to the device, so they are omitted from the webpage.
+The UI uses the user-selected capsule layout, illustrated scroll wheels, visible units and concise labels. It intentionally starts blank and hides the result until calculation, rather than copying the static screenshot's filled state. Phone status bars and home indicators belong to the device, so they are omitted from the webpage.
 
 AI tools used: Codex and Claude (Claude Code). They assisted with brief interpretation, the SVG concept, HTML/CSS/JavaScript implementation, a usability review of the page, and automated browser checks at 320px and 390px widths.
 
-What I reviewed, changed or rejected: [fill in your own decisions before submitting]
+Current decisions, trade-offs, QA evidence and tool disclosure: [DESIGN-NOTE.md](./DESIGN-NOTE.md). Review this note and only submit work you can explain.
 
 How I checked the output: [fill in what you tested yourself, e.g. on your own phone]
 
@@ -90,7 +90,7 @@ Carat range is 0.01–99.99 ct. Heat-treatment choices are scoped explicitly to 
 
 ### Illustrated heat-treatment picker
 
-The treatment input uses a scroll-snap wheel with short English labels and generated icons. Flame = heat treatment confirmed by report; crossed flame = no heat treatment confirmed by report; report/question mark = unknown. Unknown is the initial/reset selection. Icons supplement the report labels; they do not identify treatment from the gem's appearance. The transparent three-icon strip in `assets/treatment-icons.png` was generated with OpenAI Image Gen and integrated using CSS sprite positioning. The wheel supports tap and keyboard selection as well as touch scrolling. Comprehension with non-reading users still needs usability testing.
+The treatment input uses a scroll-snap wheel with short English labels and generated icons. Flame = heat treatment confirmed by report; crossed flame = no heat treatment confirmed by report; report/question mark = unknown. The initial/reset state is a “Scroll to choose” placeholder; Unknown is an explicit choice. Icons supplement the report labels; they do not identify treatment from the gem's appearance. The transparent three-icon strip in `assets/treatment-icons.png` was generated with OpenAI Image Gen and integrated using CSS sprite positioning. The wheel supports tap and keyboard selection as well as touch scrolling. Comprehension with non-reading users still needs usability testing.
 
 ### Colour-strength ring
 

@@ -7,17 +7,17 @@
   <meta name="description" content="A beginner-friendly gemstone price guide prototype. All prices are illustrative sample values.">
   <title>GEMWORLD — Gem Price Guide</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="./theme.css">
-  <link rel="stylesheet" href="./soft-ui.css">
+  <link rel="stylesheet" href="./styles.css?v=20261012-qa2">
+  <link rel="stylesheet" href="./theme.css?v=20261012-qa2">
+  <link rel="stylesheet" href="./soft-ui.css?v=20261012-qa2">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
-  <script src="./app.js" defer></script>
-  <script src="./gem-wheel.js" defer></script>
-  <script src="./carat-wheel.js" defer></script>
-  <script src="./treatment-wheel.js" defer></script>
-  <script src="./colour-ring.js" defer></script>
-  <script src="./other-gems.js" defer></script>
-  <script type="module" src="./gem-preview.js"></script>
+  <script src="./app.js?v=20261012-qa2" defer></script>
+  <script src="./gem-wheel.js?v=20261012-qa2" defer></script>
+  <script src="./carat-wheel.js?v=20261012-qa2" defer></script>
+  <script src="./treatment-wheel.js?v=20261012-qa2" defer></script>
+  <script src="./colour-ring.js?v=20261012-qa2" defer></script>
+  <script src="./other-gems.js?v=20261012-qa2" defer></script>
+  <script type="module" src="./gem-preview.js?v=20261012-qa2"></script>
 </head>
 <body>
   <main class="app">
@@ -36,7 +36,7 @@
         <figure class="gem-preview" id="gem-preview"><div class="gem-canvas" id="gem-canvas" role="img" aria-label="3D gemstone preview"><p id="gem-loading">Loading gemstone…</p></div><figcaption id="gem-caption">Choose a gem to see its colour</figcaption></figure>
       <div class="step weight-step">
         <label class="step-heading" for="weight"><span class="step-number" aria-hidden="true">2</span> How much does it weigh?</label>
-        <div class="carat-picker"><input id="weight" name="weight" type="hidden" value="0.00"><div class="carat-wheels" role="group" aria-label="Weight in carats"><div id="carat-whole" class="carat-wheel" role="spinbutton" tabindex="0" aria-label="Whole carats" aria-valuemin="0" aria-valuemax="99" aria-valuenow="0" aria-describedby="weight-help weight-error"></div><span class="carat-dot" aria-hidden="true">.</span><div id="carat-fraction" class="carat-wheel" role="spinbutton" tabindex="0" aria-label="Hundredths of a carat" aria-valuemin="0" aria-valuemax="99" aria-valuenow="0" aria-describedby="weight-help weight-error"></div></div><span class="carat-unit">carats</span><p class="carat-instruction">Scroll each column to set the weight</p></div>
+        <div class="carat-picker"><input id="weight" name="weight" type="hidden" value="0.00"><div class="carat-wheels" role="group" aria-label="Weight in carats"><div id="carat-whole" class="carat-wheel" role="spinbutton" tabindex="0" aria-label="Whole carats" aria-valuemin="0" aria-valuemax="99" aria-valuenow="0" aria-describedby="weight-help weight-error"></div><span class="carat-dot" aria-hidden="true">.</span><div id="carat-fraction" class="carat-wheel" role="spinbutton" tabindex="0" aria-label="Hundredths of a carat" aria-valuemin="0" aria-valuemax="99" aria-valuenow="0" aria-describedby="weight-help weight-error"></div></div><span class="carat-unit">carats</span><p class="carat-instruction">Scroll or tap to edit</p></div>
         <p class="field-error" id="weight-error" hidden>Enter a weight greater than 0 carats, using numbers only.</p>
         <p class="hint" id="weight-help">Look for “ct” on your scale or gem report.<br>Example: 2 ct means 2 carats.</p>
       </div>
@@ -70,7 +70,6 @@
           <p class="hint">Other treatments, such as filling or oiling, also matter. This demo covers heat treatment only and cannot value gems with other treatments.</p>
         </div>
       </details>
-      <p class="hint optional-hint">Use this section only for details you know.</p>
       <button class="primary-button" type="submit">Calculate estimate <span aria-hidden="true">↓</span></button>
     </form>
     <section class="result-section" id="result" aria-labelledby="result-heading" hidden>

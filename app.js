@@ -32,15 +32,15 @@ form.addEventListener('submit', (event) => {
   const rawWeight = $('weight').value.trim();
   const weight = Number(rawWeight);
   const treatment = selected('treatment');
-  if (!gem) errors.push(['gem-error', form.querySelector('[name="gem"]')]);
+  if (!gem) errors.push(['gem-error', form.querySelector('.gem-wheel')]);
   if (gem === 'other' && !selected('otherGem')) errors.push(['other-error', $('choose-other-gem')]);
   if (!/^\d+(?:\.\d+)?$/.test(rawWeight) || !Number.isFinite(weight) || weight <= 0 || weight > 99.99) {
     $('weight-error').textContent = weight > 99.99 ? 'For this demo, enter a weight up to 99.99 carats.' : 'Enter a weight greater than 0 carats, using numbers only.';
     errors.push(['weight-error', $('carat-whole')]);
   }
-  if (!treatment) errors.push(['treatment-error', form.querySelector('[name="treatment"]')]);
+  if (!treatment) errors.push(['treatment-error', form.querySelector('.treatment-wheel')]);
   if (errors.length) {
-    errors.forEach(([id, input]) => { $(id).hidden = false; input.setAttribute('aria-invalid', 'true'); input.setAttribute('aria-describedby', input.id === 'weight' ? `weight-help ${id}` : id); });
+    errors.forEach(([id, input]) => { $(id).hidden = false; input.setAttribute('aria-invalid', 'true'); input.setAttribute('aria-describedby', input.id === 'carat-whole' ? `weight-help ${id}` : id); });
     errors[0][1].focus();
     announcement.textContent = 'Please check the highlighted details.';
     return;
@@ -79,7 +79,7 @@ $('reset-button').addEventListener('click', () => {
   clearErrors();
   hideResult();
   updateGemFields();
-  form.querySelector('[name="gem"]').focus();
+  form.querySelector('.gem-wheel').focus({ preventScroll: true });
   announcement.textContent = 'Calculator cleared. Start with your gem.';
 });
 $('help-button').addEventListener('click', () => dialog.showModal());
