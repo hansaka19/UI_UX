@@ -117,3 +117,7 @@ button:focus-visible,input:focus-visible,select:focus-visible,.carat-wheel:focus
 .gem-capsule>.wheel-hint{margin:8px -14px 0;text-align:center}
 .gem-grid.gem-wheel:not(:has(.wheel-selected)) .gem-choice{opacity:.55}
 @media(max-width:375px){.carat-instruction,.wheel-hint,.more-details summary small{font-size:13px}}
+/* The instruction sits in each wheel's centre slot until something is chosen. */
+.wheel-placeholder{display:flex;align-items:center;justify-content:center;scroll-snap-align:center;scroll-snap-stop:always;color:#5c6671;font-size:15px;font-style:italic}
+.gem-wheel .wheel-placeholder{height:44px}
+.treatment-wheel .wheel-placeholder{height:var(--treatment-row);font-size:17px}

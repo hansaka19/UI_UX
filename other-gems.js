@@ -95,7 +95,7 @@
     radio.checked=true;
     radio.dispatchEvent(new Event('change',{bubbles:true}));
     if (!primary) {select.value=chosen;select.dispatchEvent(new Event('change',{bubbles:true}));}
-    document.querySelector('.gem-wheel').scrollTop=primaryGems.indexOf(type)*44;
+    document.querySelector('.gem-wheel').scrollTop=(primaryGems.indexOf(type)+1)*44;
     refresh();
     // "Other gem" stays open: the change above swaps the wheel to the other varieties.
     if (chosen !== 'other') modal.close();

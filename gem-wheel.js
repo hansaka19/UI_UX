@@ -14,10 +14,12 @@
     choice.id = `gem-option-${i}`;
     choice.querySelector('input').tabIndex = -1;
   });
-  const help = document.createElement('p');
-  help.className = 'wheel-hint';
-  help.textContent = 'Tap or scroll to choose your gem';
-  wheel.after(help);
+  // The first row holds the instruction, so the wheel starts on it until a gem is chosen.
+  const placeholder = document.createElement('div');
+  placeholder.className = 'wheel-placeholder';
+  placeholder.setAttribute('aria-hidden', 'true');
+  placeholder.textContent = 'Scroll to choose';
+  wheel.prepend(placeholder);
   const height = 44;
   let timer, syncing = false;
   const refresh = () => {
@@ -36,9 +38,18 @@
     }
     refresh();
   };
+  const clear = () => {
+    const radio = choices.map(choice => choice.querySelector('input')).find(input => input.checked);
+    if (!radio) return;
+    radio.checked = false;
+    radio.dispatchEvent(new Event('change', { bubbles: true }));
+    wheel.removeAttribute('aria-activedescendant');
+    refresh();
+  };
   const settle = () => {
     if (syncing) return;
-    select(Math.max(0, Math.min(choices.length - 1, Math.round(wheel.scrollTop / height))));
+    const index = Math.min(choices.length - 1, Math.round(wheel.scrollTop / height) - 1);
+    if (index < 0) clear(); else select(index);
   };
   wheel.addEventListener('scroll', () => {
     clearTimeout(timer);
@@ -48,7 +59,7 @@
   choices.forEach((choice, index) => choice.addEventListener('click', event => {
     event.preventDefault();
     select(index);
-    wheel.scrollTo({ top: index * height, behavior: 'smooth' });
+    wheel.scrollTo({ top: (index + 1) * height, behavior: 'smooth' });
   }));
   wheel.addEventListener('keydown', event => {
     if (!['ArrowUp', 'ArrowDown', 'Home', 'End'].includes(event.key)) return;
@@ -56,12 +67,12 @@
     let index = choices.findIndex(choice => choice.querySelector('input').checked);
     index = event.key === 'Home' ? 0 : event.key === 'End' ? choices.length - 1 : Math.max(0, Math.min(choices.length - 1, index + (event.key === 'ArrowDown' ? 1 : -1)));
     select(index);
-    wheel.scrollTo({ top: index * height, behavior: 'smooth' });
+    wheel.scrollTo({ top: (index + 1) * height, behavior: 'smooth' });
   });
   const sync = () => {
     const index = choices.findIndex(choice => choice.querySelector('input').checked);
     syncing = true;
-    wheel.scrollTop = Math.max(0, index) * height;
+    wheel.scrollTop = (index + 1) * height;
     refresh();
     if (index < 0) wheel.removeAttribute('aria-activedescendant');
     setTimeout(() => { syncing = false; }, 180);
