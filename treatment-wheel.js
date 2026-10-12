@@ -7,9 +7,12 @@
   const placeholder = document.createElement('div');
   placeholder.className = 'wheel-placeholder';
   placeholder.setAttribute('aria-hidden', 'true');
-  placeholder.textContent = 'Scroll to choose';
+  placeholder.textContent = 'Choose heat treatment';
   wheel.prepend(placeholder);
   wheel.classList.add('treatment-wheel');
+  const control=document.createElement('div');control.className='treatment-selection-control';
+  wheel.before(control);control.append(wheel);
+  const arrows=document.createElement('span');arrows.className='treatment-selection-arrows';arrows.setAttribute('aria-hidden','true');arrows.textContent='⌃\n⌄';control.append(arrows);
   wheel.setAttribute('role', 'listbox');
   wheel.setAttribute('aria-label', 'Heat treatment shown on the report');
   wheel.tabIndex = 0;
@@ -19,12 +22,14 @@
     choice.id = `treatment-option-${index}`;
     choice.setAttribute('role', 'option');
     choice.querySelector('input').tabIndex = -1;
+    const mark=document.createElement('span');mark.className='treatment-option-mark';mark.setAttribute('aria-hidden','true');choice.append(mark);
   });
   function paint() {
     choices.forEach(choice => {
       const active = choice.querySelector('input').checked;
       choice.classList.toggle('treatment-selected', active);
       choice.setAttribute('aria-selected', String(active));
+      choice.querySelector('.treatment-option-mark').textContent=active?'✓':'○';
       if (active) wheel.setAttribute('aria-activedescendant', choice.id);
     });
 

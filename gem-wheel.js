@@ -18,8 +18,11 @@
   const placeholder = document.createElement('div');
   placeholder.className = 'wheel-placeholder';
   placeholder.setAttribute('aria-hidden', 'true');
-  placeholder.textContent = 'Scroll to choose';
+  placeholder.textContent = 'Choose your gem';
   wheel.prepend(placeholder);
+  const control=document.createElement('div');control.className='gem-selection-control';
+  wheel.before(control);control.append(wheel);
+  const arrows=document.createElement('span');arrows.className='gem-selection-arrows';arrows.setAttribute('aria-hidden','true');arrows.textContent='⌃\n⌄';control.append(arrows);
   const height = 44;
   let timer, syncing = false;
   const refresh = () => {

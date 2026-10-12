@@ -33,7 +33,7 @@ Playwright Chromium against http://localhost:8080: initial empty state, page ide
 ## Limits and next improvements
 
 - Only the specified blue-sapphire combination has illustrative pricing. The brief permits sample values; this does not establish wider valuation coverage.
-- The first capsule is tall on a small phone, and gem-type selection comes below weight. There is a discoverability trade-off in the accepted visual layout. Test whether users find that wheel; consider putting gem selection nearer the preview if they miss it.
+- Gem selection now appears first, above the preview, with an inset border and arrow cues. The capsule still requires scrolling on a small phone; discoverability needs user testing.
 - The circular colour control needs testing to establish that users can drag it accurately without coaching. Screen appearance cannot grade a gem.
 - Icons are supplemented with labels; understanding by users who cannot read English is unverified.
 - Real iPhone Safari, assistive-technology usability and GPU/memory performance remain untested. No claim of full WCAG compliance or actual-user usability testing is made.

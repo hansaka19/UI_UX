@@ -16,7 +16,7 @@ Mobile interaction principles considered include recognizable labels, visible un
 
 ## Decisions
 
-- A centered capsule groups the gem preview, colour strength, carats and gem type. Off-white surfaces and purple accents follow the user’s selected visual references. Treatment illustrations retain their original orange/grey colours.
+- A centered capsule groups gem selection first, followed by the gem preview, colour strength and carats. The gem wheel has an inset border and arrow cues to make selection apparent. Off-white surfaces and purple accents follow the user’s selected visual references. Treatment illustrations retain their original orange/grey colours.
 - Gem and treatment wheels start with “Scroll to choose”, rather than assuming a gem or treatment. Selected names remain readable; touch, tap and keyboard interaction are available.
 - The two carat columns can scroll independently or be edited in place by tapping the selected number. “Scroll or tap to edit” is retained because the typing capability is otherwise hard to discover. It replaces the longer instruction.
 - A square handle on a light-to-deep colour arc replaces the strength dropdown. The hue follows the selected gem; the 3D preview updates live. Unknown colour remains available. This screen approximation cannot grade a real gem.

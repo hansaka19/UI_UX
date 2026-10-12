@@ -7,17 +7,17 @@
   <meta name="description" content="A beginner-friendly gemstone price guide prototype. All prices are illustrative sample values.">
   <title>GEMWORLD — Gem Price Guide</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css?v=20261012-side-rings">
-  <link rel="stylesheet" href="./theme.css?v=20261012-side-rings">
-  <link rel="stylesheet" href="./soft-ui.css?v=20261012-side-rings">
+  <link rel="stylesheet" href="./styles.css?v=20261012-picker-fit">
+  <link rel="stylesheet" href="./theme.css?v=20261012-picker-fit">
+  <link rel="stylesheet" href="./soft-ui.css?v=20261012-picker-fit">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
-  <script src="./app.js?v=20261012-side-rings" defer></script>
-  <script src="./gem-wheel.js?v=20261012-side-rings" defer></script>
-  <script src="./carat-wheel.js?v=20261012-side-rings" defer></script>
-  <script src="./treatment-wheel.js?v=20261012-side-rings" defer></script>
-  <script src="./colour-ring.js?v=20261012-side-rings" defer></script>
-  <script src="./other-gems.js?v=20261012-side-rings" defer></script>
-  <script type="module" src="./gem-preview.js?v=20261012-side-rings"></script>
+  <script src="./app.js?v=20261012-picker-fit" defer></script>
+  <script src="./gem-wheel.js?v=20261012-picker-fit" defer></script>
+  <script src="./carat-wheel.js?v=20261012-picker-fit" defer></script>
+  <script src="./treatment-wheel.js?v=20261012-picker-fit" defer></script>
+  <script src="./colour-ring.js?v=20261012-picker-fit" defer></script>
+  <script src="./other-gems.js?v=20261012-picker-fit" defer></script>
+  <script type="module" src="./gem-preview.js?v=20261012-picker-fit"></script>
 </head>
 <body>
   <main class="app">
@@ -32,7 +32,14 @@
     <form id="calculator" novalidate>
       <fieldset class="step">
         <legend><span class="step-number" aria-hidden="true">1</span> Which gem do you have?</legend>
+        <div class="gem-grid">
+          <label class="gem-choice"><input type="radio" name="gem" value="sapphire"><span class="gem-symbol sapphire" aria-hidden="true"></span><span>Sapphire</span><span class="selected-tick" aria-hidden="true">✓</span></label>
+          <label class="gem-choice"><input type="radio" name="gem" value="ruby"><span class="gem-symbol ruby" aria-hidden="true"></span><span>Ruby</span><span class="selected-tick" aria-hidden="true">✓</span></label>
+          <label class="gem-choice"><input type="radio" name="gem" value="emerald"><span class="gem-symbol emerald" aria-hidden="true"></span><span>Emerald</span><span class="selected-tick" aria-hidden="true">✓</span></label>
+          <label class="gem-choice"><input type="radio" name="gem" value="other"><span class="gem-symbol other" aria-hidden="true"></span><span>Other gem</span><span class="selected-tick" aria-hidden="true">✓</span></label>
+        </div>
         <div class="gem-capsule">
+
         <figure class="gem-preview" id="gem-preview"><div class="gem-canvas" id="gem-canvas" role="img" aria-label="3D gemstone preview"><p id="gem-loading">Loading gemstone…</p></div><figcaption id="gem-caption">Choose a gem to see its colour</figcaption></figure>
       <div class="step weight-step">
         <label class="step-heading" for="weight"><span class="step-number" aria-hidden="true">2</span> How much does it weigh?</label>
@@ -40,12 +47,7 @@
         <p class="field-error" id="weight-error" hidden>Enter a weight greater than 0 carats, using numbers only.</p>
         <p class="hint" id="weight-help">Look for “ct” on your scale or gem report.<br>Example: 2 ct means 2 carats.</p>
       </div>
-        <div class="gem-grid">
-          <label class="gem-choice"><input type="radio" name="gem" value="sapphire"><span class="gem-symbol sapphire" aria-hidden="true"></span><span>Sapphire</span><span class="selected-tick" aria-hidden="true">✓</span></label>
-          <label class="gem-choice"><input type="radio" name="gem" value="ruby"><span class="gem-symbol ruby" aria-hidden="true"></span><span>Ruby</span><span class="selected-tick" aria-hidden="true">✓</span></label>
-          <label class="gem-choice"><input type="radio" name="gem" value="emerald"><span class="gem-symbol emerald" aria-hidden="true"></span><span>Emerald</span><span class="selected-tick" aria-hidden="true">✓</span></label>
-          <label class="gem-choice"><input type="radio" name="gem" value="other"><span class="gem-symbol other" aria-hidden="true"></span><span>Other gem</span><span class="selected-tick" aria-hidden="true">✓</span></label>
-        </div>
+
         </div>
         <p class="field-error" id="gem-error" hidden>Choose the gem you have.</p>
         <div class="additional-field" id="other-gem-field" hidden><select id="other-gem" name="otherGem" hidden aria-label="Other gemstone"><option value="">Choose a gem</option><option value="spinel">Spinel</option><option value="tourmaline">Tourmaline</option><option value="garnet">Garnet</option><option value="aquamarine">Aquamarine</option><option value="amethyst">Amethyst</option><option value="citrine">Citrine</option><option value="topaz">Topaz</option><option value="zircon">Zircon</option><option value="peridot">Peridot</option><option value="unknown">I do not know</option></select><button type="button" id="choose-other-gem" class="secondary-button" aria-haspopup="dialog">Choose another gemstone</button><p class="field-error" id="other-error" hidden>Choose a gem, or select “I do not know”.</p></div>
