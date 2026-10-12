@@ -40,6 +40,13 @@ These checks do not prove non-technical usability. Next, test with 3–5 traders
 
 ## AI and tool disclosure
 
-Codex assisted with brief interpretation, interaction code, styling, the browser-native gem geometry/optical shader, documentation and QA. OpenAI Image Gen generated the treatment icon strip. Three.js powers the preview; Playwright Chromium and Node/Python were used for verification and brief extraction. The repository README also records Claude Code usage from the broader project; the contributor should be able to explain that work before submission.
+I used AI tools throughout this project. I directed the design, and I reviewed and tested what they produced.
 
-Changes directed and reviewed by the user include the capsule layout, point-down gem, scroll-plus-inline carat editing, floating picker, original icon colours, purple accents and the colour-strength ring. Longer instructions and duplicate explanations were shortened or removed. Claims of actual-user testing, real iPhone testing, market pricing or fully photorealistic rendering were not made.
+- **Codex** helped me interpret the brief and write the first interaction code, the styling, the 3D gem geometry and optical shader, the documentation and early QA checks.
+- **Claude (Claude Code)** helped me match the expanded gem picker to my sketch. It also reviewed the page for usability problems. Following that review, I fixed a bug where the first tap on a gem opened the picker, made the weight question visible, enlarged text smaller than 13px, renamed the title from "Valuation Calculator" to "Gem Price Guide", and moved the "Scroll to choose" hint into each wheel's centre slot. Claude also helped me publish the site on GitHub Pages and prepare this note as a PDF.
+- **OpenAI Image Gen** generated the treatment icon strip.
+- **Three.js** renders the gem preview. **Playwright (Chromium)** and Node/Python were used for automated browser checks.
+
+My own design decisions include the capsule layout, the point-down gem, carat wheels that can also be edited by tapping, the floating gem picker, the colour-strength ring, the purple accents and keeping the icons' original colours. I asked for long instructions and duplicate explanations to be shortened or removed. I chose to show "Scroll to choose" instead of pre-selecting a treatment, so the app never assumes an answer for the user.
+
+I checked the output by running the page in a browser and reviewing screenshots at phone widths, and by running automated checks of the main flows. I have not tested it with real traders or on a real iPhone. The prices are not market data, and the 3D rendering is not photorealistic. I can explain every part of this prototype.
