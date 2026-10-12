@@ -108,3 +108,12 @@ button:focus-visible,input:focus-visible,select:focus-visible,.carat-wheel:focus
 
 /* Treatment illustrations retain their original colours. */
 .treatment-icon{filter:none}
+/* Review fixes: a visible weight question, readable small text and a clear empty gem state. */
+.weight-step .step-heading{position:static;width:auto;height:auto;overflow:visible;clip-path:none;justify-content:center;margin:20px -12px 4px;font-size:16px;font-weight:600;text-align:center}
+.weight-step .step-heading .step-number{display:none}
+.intro .demo-note,.colour-unknown,.carat-instruction,.wheel-hint,.treatment-scroll-hint,.colour-ring-hint,.treatment-wheel .treatment-choice small{font-size:13px}
+.colour-ring-readout{font-size:14px}
+.colour-ring-hint,.carat-instruction,.wheel-hint{margin-left:-14px;margin-right:-14px}
+.gem-capsule>.wheel-hint{margin:8px -14px 0;text-align:center}
+.gem-grid.gem-wheel:not(:has(.wheel-selected)) .gem-choice{opacity:.55}
+@media(max-width:375px){.carat-instruction,.wheel-hint,.more-details summary small{font-size:13px}}

@@ -76,7 +76,10 @@
   });
   trigger.addEventListener('click', open);
   document.querySelector('.gem-wheel').addEventListener('dblclick',open);
-  document.querySelector('.gem-wheel').addEventListener('click',event=>{if(event.target.closest('.wheel-selected'))open();});
+  // Capture runs before the row's own click handler selects it, so a first tap only selects.
+  let tappedSelected = false;
+  document.querySelector('.gem-wheel').addEventListener('click',event=>{tappedSelected=!!event.target.closest('.wheel-selected');},true);
+  document.querySelector('.gem-wheel').addEventListener('click',()=>{if(tappedSelected)open();});
   document.getElementById('close-other-gems').addEventListener('click', () => modal.close());
   allOptions.forEach(button=>button.addEventListener('click',()=>{
     const index=options.indexOf(button);

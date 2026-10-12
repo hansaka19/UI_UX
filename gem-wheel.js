@@ -16,8 +16,8 @@
   });
   const help = document.createElement('p');
   help.className = 'wheel-hint';
-  help.textContent = 'Scroll up or down to choose';
-  document.querySelector('.carat-picker').append(help);
+  help.textContent = 'Tap or scroll to choose your gem';
+  wheel.after(help);
   const height = 44;
   let timer, syncing = false;
   const refresh = () => {
