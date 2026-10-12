@@ -1,4 +1,7 @@
-# Gemwise — mobile gemstone price guide
+# GEMWORLD — Gem Price Guide (mobile prototype)
+
+**Live prototype:** https://hansaka19.github.io/UI_UX/
+**Source:** https://github.com/hansaka19/UI_UX
 
 A single-page, responsive HTML/CSS/JavaScript take-home prototype. No build step, backend or API key is required. Three.js is bundled locally for the 3D preview.
 
@@ -15,13 +18,13 @@ Then visit http://localhost:8080. VS Code Live Server also works.
 ## Publish with GitHub Pages
 
 1. Create a GitHub repository, e.g. `gemwise`.
-2. Upload **the contents of this folder** to the repository root, including `index.html`, `styles.css`, `theme.css`, `app.js`, `gem-preview.js`, `favicon.svg`, `.nojekyll`, and the complete `assets/` and `vendor/` folders. Do not upload the parent workspace or PDF.
+2. Upload **the contents of this folder** to the repository root: every `.html`, `.css` and `.js` file, `favicon.svg`, `.nojekyll`, and the complete `assets/` and `vendor/` folders. Do not upload the parent workspace or PDF.
 3. In the repository, go to **Settings → Pages**.
 4. Under **Build and deployment**, select **Deploy from a branch**.
 5. Select your `main` branch and `/ (root)`, then **Save**.
 6. When deployment completes, Pages will display the live URL, normally `https://YOUR-USERNAME.github.io/gemwise/`.
 
-All asset paths are relative, so deployment under a repository subpath works. These instructions prepare publication; no repository or deployment has been created for you.
+All asset paths are relative, so deployment under a repository subpath works. This prototype is published at https://hansaka19.github.io/UI_UX/.
 
 ## What works
 
@@ -41,9 +44,15 @@ These values are invented, not current gem-market prices. Unknown details are ne
 
 ## Design and AI disclosure
 
-The UI implements the accepted Gemwise SVG concept using large selection cards, numbered questions, visible units and plain explanations. It intentionally starts blank and hides the result until calculation, rather than copying the static screenshot's filled state. Phone status bars and home indicators belong to the device, so they are omitted from the webpage.
+The UI implements the accepted SVG concept using large selection cards, numbered questions, visible units and plain explanations. It intentionally starts blank and hides the result until calculation, rather than copying the static screenshot's filled state. Phone status bars and home indicators belong to the device, so they are omitted from the webpage.
 
-Codex assisted with brief interpretation, the SVG concept, HTML/CSS/JavaScript implementation and automated browser checks. Before submitting, add the specific decisions you personally reviewed, changed and tested. Submit only work you understand and can explain.
+AI tools used: Codex and Claude (Claude Code). They assisted with brief interpretation, the SVG concept, HTML/CSS/JavaScript implementation, a usability review of the page, and automated browser checks at 320px and 390px widths.
+
+What I reviewed, changed or rejected: [fill in your own decisions before submitting]
+
+How I checked the output: [fill in what you tested yourself, e.g. on your own phone]
+
+Submit only work you understand and can explain.
 
 Research references: [GIA sapphire guide](https://www.gia.edu/sapphire/buyers-guide), [NN/g progressive disclosure](https://www.nngroup.com/articles/progressive-disclosure/), [W3C form labels](https://www.w3.org/WAI/tutorials/forms/labels/).
 
@@ -55,7 +64,7 @@ Official deployment reference: https://docs.github.com/en/pages/getting-started-
 - Help → Try a filled-in example එකෙන් working sample result එක බලන්න.
 - GitHub repository එකට මේ folder එකේ files root එකට upload කරන්න.
 - Settings → Pages → Deploy from a branch → main → / (root) → Save.
-- මේ prototype එක තවම GitHub එකට publish කරලා නැහැ.
+- Live link එක: https://hansaka19.github.io/UI_UX/
 
 ## 3D gemstone preview
 
@@ -65,7 +74,7 @@ Third-party code: Three.js 0.170.0 (MIT; see `vendor/LICENSE-three.txt`), includ
 
 ## Visual direction
 
-Current styling uses off-white soft surfaces, subtle shadows and deep-purple controls in `soft-ui.css`, layered over the existing base styles. A centered capsule groups the gem, circular colour control, editable carat wheels and gemstone wheel. Desktop uses two columns; phones retain one scrolling column.
+Current styling uses off-white soft surfaces, subtle shadows and deep-purple controls in `soft-ui.css`, layered over the existing base styles. A centered capsule groups the gem, circular colour control, editable carat wheels and gemstone wheel. Desktop uses two columns; phones retain one scrolling column. The page title is "Gem Price Guide" rather than "Valuation", because the result is an illustrative estimate, not a valuation.
 
 ## Wheel selection
 
