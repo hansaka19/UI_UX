@@ -1,0 +1,110 @@
+/* User reference: off-white soft surfaces with deep purple controls. */
+:root{--green:#361144;--ink:#343b43;--muted:#727b85;--background:#f1f3f6;--line:#e3e6eb;--selected:#eee6f3;--soft-shadow:10px 10px 25px #cdd2dc88,-10px -10px 25px #ffffff}
+html,body{background:#f1f3f6;color:var(--ink)}
+body{background:radial-gradient(ellipse at 30% 0,#fff9,transparent 65%),#f1f3f6}
+.app{padding-top:40px}
+h1,h2,.step legend,.step-heading{color:#343b43}
+.intro>p,.hint,.optional-hint{color:#69737d}
+.intro .demo-note{background:transparent;box-shadow:none;border:0;color:#737b84;font-size:11px}
+.help-button,.secondary-button,.close-button,.treatment-choice,.more-details,.result-section{background:linear-gradient(145deg,#fafbfd,#edf0f4);border:1px solid #ffffffa6;box-shadow:6px 6px 16px #d2d6df99,-6px -6px 16px #fff;backdrop-filter:none;-webkit-backdrop-filter:none;color:#535d68}
+.help-button{border-radius:16px;color:#361144;min-height:42px}
+.help-button:hover,.secondary-button:hover,.close-button:hover,.treatment-choice:hover{background:#f8f9fb;box-shadow:4px 4px 12px #d1d5de99,-4px -4px 12px white}
+.gem-capsule{background:linear-gradient(145deg,#f9fafc,#edf0f4);border:1px solid #ffffffcf;box-shadow:var(--soft-shadow);backdrop-filter:none;-webkit-backdrop-filter:none;color:#424b55;padding-top:22px}
+.gem-canvas{position:relative;background:radial-gradient(circle at 35% 25%,#fff,#e9edf2);border:8px solid #f2f4f7;box-shadow:inset 5px 5px 13px #cbd1db88,inset -5px -5px 13px #fff,5px 5px 15px #c9cfdc66,-5px -5px 15px #fff}
+.gem-canvas:after{content:'';position:absolute;inset:3px;border-radius:50%;border:2px solid transparent;border-left-color:#361144;transform:rotate(25deg);pointer-events:none}
+.carat-row,.carat-dot,.carat-unit{color:#8a929c}
+.carat-row.carat-selected{color:#39424d}
+.carat-dot{color:#361144}
+.carat-instruction,.wheel-hint{color:#68737e;font-size:10px}
+.gem-grid.gem-wheel{background:none}
+.gem-grid.gem-wheel .gem-choice{color:#6e7884}
+.gem-grid.gem-wheel .gem-choice.wheel-selected{color:#361144}
+.carat-inline-input{color:#39424d;background:#f3f5f8;border:1px solid #a58bb4;box-shadow:inset 3px 3px 6px #d4d9e2,inset -3px -3px 6px #fff;backdrop-filter:none}
+.treatment-choice small,.more-details summary small{color:#6a7480}
+.treatment-choice:has(input:checked){background:linear-gradient(145deg,#f7f3fa,#eae0f0);border-color:#b49ac3;box-shadow:4px 4px 12px #d4d8e166,-4px -4px 12px #fff}
+.radio-mark{border-color:#b3bac3;background:#f4f6f8}
+.treatment-choice:has(input:checked) .radio-mark:after{background:#361144}
+.step-number{color:#361144;background:#f5f6f8;border:1px solid #fff;box-shadow:3px 3px 6px #d3d8e2,-3px -3px 6px #fff}
+.details-content select,.additional-field select{color:#47515c;background:#f2f4f7;border:1px solid #e1e5eb;box-shadow:inset 3px 3px 7px #d5dae480,inset -3px -3px 7px #fff}
+.primary-button{background:linear-gradient(145deg,#4b1d5d,#361144);color:#fff;border:1px solid #62406e;box-shadow:6px 6px 16px #d5d8df,-5px -5px 15px #fff;backdrop-filter:none;-webkit-backdrop-filter:none}
+.primary-button:hover{background:linear-gradient(145deg,#421951,#290b35)}
+.price-card{background:linear-gradient(145deg,#f9fafc,#edf0f4);border:1px solid white;box-shadow:6px 6px 16px #d2d6df99,-6px -6px 16px #fff;color:#4b5561}
+.price-value{color:#361144}.price-label,.price-caption,.per-carat,.result-summary{color:#65717e}.per-carat{border-color:#dfe4ea}.calculation-note summary{color:#361144}
+#other-gems-dialog::backdrop{background:#f0f2f4b3;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+body:has(#other-gems-dialog[open]) .gem-capsule{background:#c8ced6;border-color:transparent;box-shadow:none}
+#other-gems-dialog .other-gem-wheel button{color:#747e89}
+#other-gems-dialog .other-gem-wheel .other-wheel-selected{color:#361144}
+#other-gems-dialog #confirm-other-gem{background:linear-gradient(145deg,#fafbfdcc,#e7ebf1d9);border:1px solid #fff9;color:#361144;box-shadow:5px 5px 12px #c5ccd799,-5px -5px 12px #fff9}
+#other-gems-dialog #confirm-other-gem:hover{background:#fff}
+button:focus-visible,input:focus-visible,select:focus-visible,.carat-wheel:focus-visible{outline-color:#58246d}
+@media(max-width:375px){.app{padding-top:28px}.header{margin-bottom:48px}}
+
+
+/* The 3D canvas clips to its circle; its outer shadow must remain unclipped. */
+.gem-preview{overflow:visible;isolation:auto}
+.gem-canvas{overflow:hidden;flex:none}
+.gem-canvas canvas{width:100%!important;height:100%!important}
+.gem-capsule{overflow:visible;padding-bottom:32px;box-shadow:9px 12px 24px #ccd2dc80,-8px -8px 22px #ffffff}
+.carat-instruction,.wheel-hint{font-size:11px;line-height:1.5;color:#5c6671}
+.carat-picker>.carat-instruction{margin:0 -12px 10px}
+.carat-row:not(.carat-selected){opacity:.64;color:#7a8490}
+.gem-grid.gem-wheel .gem-choice{opacity:.78}
+.gem-grid.gem-wheel .gem-choice.wheel-selected{opacity:1}
+.treatment-step{margin-top:34px}
+.help-button{min-height:44px}
+.carat-wheel:focus-visible{outline-offset:-2px;border-radius:8px}
+@media(max-width:350px){.gem-capsule{box-shadow:7px 9px 20px #ccd2dc80,-6px -6px 18px #fff}.carat-instruction,.wheel-hint{font-size:11px}}
+/* The capsule combines the first inputs, so avoid an isolated step number. */
+.treatment-step legend .step-number{display:none}
+#gem-loading{max-width:145px;padding:12px;text-align:center;font-size:12px;line-height:1.5;color:#65717e;margin:0}
+/* Illustrated heat-treatment wheel with short English labels. */
+.treatment-options.treatment-wheel{--treatment-row:88px;display:block;height:calc(var(--treatment-row)*3);padding:var(--treatment-row) 0;overflow-y:auto;overscroll-behavior-y:contain;scroll-snap-type:y mandatory;touch-action:pan-y;scrollbar-width:none;mask-image:linear-gradient(transparent,#000 24%,#000 76%,transparent);border-radius:22px;background:linear-gradient(145deg,#f9fafc,#edf0f4);box-shadow:inset 4px 4px 12px #d4d9e270,inset -4px -4px 12px #fff}
+.treatment-wheel::-webkit-scrollbar{display:none}
+.treatment-options.treatment-wheel .treatment-choice{height:var(--treatment-row);min-height:var(--treatment-row);margin:0;padding:10px 12px;gap:10px;border:0;border-radius:0;background:transparent;box-shadow:none;scroll-snap-align:center;scroll-snap-stop:always;opacity:.65}
+.treatment-options.treatment-wheel .treatment-selected{opacity:1;background:#eee6f36b}
+.treatment-wheel .treatment-choice strong{font-size:17px;line-height:1.5;color:#47515c}
+.treatment-wheel .treatment-choice small{font-size:11px;line-height:1.4}
+.treatment-wheel .treatment-selected strong{color:#361144}
+.treatment-icon{display:block;flex:none;width:56px;height:56px;background-image:url('./assets/treatment-icons.png');background-repeat:no-repeat;background-size:300% 100%;background-position:0% 50%}
+.unheated-icon{background-position:50% 50%}.unknown-icon{background-position:100% 50%}
+.treatment-selection,.treatment-scroll-hint{text-align:center;color:#65717d;font-size:12px;line-height:1.6;margin:12px 0 0}
+.treatment-scroll-hint{font-size:11px;margin-top:8px}
+.treatment-wheel:focus-visible{outline:2px solid #58246d;outline-offset:3px}
+@media(max-width:350px){.treatment-icon{width:48px;height:48px}.treatment-wheel .treatment-choice strong{font-size:15px}.treatment-options.treatment-wheel .treatment-choice{padding-left:8px;padding-right:8px}}
+.treatment-wheel .treatment-choice strong{font-size:18px}
+.treatment-selection{font-size:13px}
+@media(max-width:350px){.treatment-wheel .treatment-choice strong{font-size:16px}}
+/* Keep the form's visual alignment consistent with the centered capsule. */
+.treatment-step legend{justify-content:center;text-align:center}
+.treatment-options.treatment-wheel .treatment-choice{justify-content:center;text-align:left}
+.treatment-wheel .treatment-choice>span:last-child{flex:0 0 150px}
+.treatment-scroll-hint,.optional-hint{text-align:center}
+.more-details summary{position:relative;justify-content:center;text-align:center;padding-left:40px;padding-right:40px}
+.more-details summary .disclosure{position:absolute;right:16px}
+#calculator>.primary-button{position:relative;justify-content:center;padding-left:44px;padding-right:44px}
+#calculator>.primary-button span{position:absolute;right:20px;margin-left:0}
+.result-section>h2,.result-summary,.result-disclaimer,.unknown-card{text-align:center}
+@media(max-width:350px){.treatment-wheel .treatment-choice>span:last-child{flex-basis:140px}}
+/* A light-to-deep colour arc replaces the decorative accent stroke. */
+.gem-preview{position:relative;width:176px;margin-left:auto;margin-right:auto}
+.gem-canvas:after{display:none}
+.colour-ring{position:absolute;inset:-10px;width:196px;height:196px;pointer-events:none;touch-action:none;border-radius:50%}
+.colour-ring svg{display:block;width:100%;height:100%;overflow:visible;pointer-events:none}
+.colour-ring:focus-visible{outline:2px solid #b0b8c4;outline-offset:3px}
+.colour-ring-readout{text-align:center;font-size:12px;color:#4b5663;margin:18px -8px 0;line-height:1.5}
+.colour-ring-hint{text-align:center;font-size:10px;color:#65717d;margin:4px -12px 0;line-height:1.5}
+.colour-unknown{display:block;margin:7px auto 0;padding:4px 10px;min-height:30px;border:1px solid #e1e6ed;border-radius:999px;background:#f6f8fb;color:#69737f;font-size:11px}
+.colour-unknown.is-unknown{color:#361144;border-color:#c5b0d2}
+.intro h1{margin-bottom:0}
+.product-name{display:block;font-size:27px;letter-spacing:3px;font-weight:700;line-height:1.3;color:#343b43}
+.product-title{display:block;margin-top:8px;font-size:17px;letter-spacing:.3px;font-weight:400;line-height:1.5;color:#69737d}
+.intro .demo-note{margin-top:16px}
+@media(max-width:350px){.product-name{font-size:25px}.product-title{font-size:16px}}
+/* Wordmark and Help share the header; the calculator name is the page title. */
+.header{justify-content:space-between;gap:16px}
+.header .brand{position:static;width:auto;height:auto;overflow:visible;clip-path:none;flex:none;font-size:19px;letter-spacing:1.6px;font-weight:700;line-height:1.2;color:#343b43}
+.intro h1{font-size:27px;font-weight:600;line-height:1.3;letter-spacing:-.5px}
+@media(max-width:350px){.header .brand{font-size:17px;letter-spacing:1.2px}.intro h1{font-size:24px}}
+
+/* Treatment illustrations retain their original colours. */
+.treatment-icon{filter:none}

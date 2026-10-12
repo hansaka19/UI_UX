@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1f3f6">
+  <meta name="description" content="A beginner-friendly gemstone price guide prototype. All prices are illustrative sample values.">
+  <title>GEMWORLD — Valuation Calculator</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./theme.css">
+  <link rel="stylesheet" href="./soft-ui.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+  <script src="./app.js" defer></script>
+  <script src="./gem-wheel.js" defer></script>
+  <script src="./carat-wheel.js" defer></script>
+  <script src="./treatment-wheel.js" defer></script>
+  <script src="./colour-ring.js" defer></script>
+  <script src="./other-gems.js" defer></script>
+  <script type="module" src="./gem-preview.js"></script>
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <a class="brand" href="./" aria-label="GEMWORLD home">GEMWORLD</a>
+      <button class="help-button" type="button" id="help-button" aria-haspopup="dialog"><span aria-hidden="true">?</span> Help</button>
+    </header>
+    <section class="intro" aria-labelledby="page-title">
+      <h1 id="page-title">Valuation Calculator</h1>
+      <p class="demo-note"><strong>DEMO</strong> · Prices here are examples only</p>
+    </section>
+    <form id="calculator" novalidate>
+      <fieldset class="step">
+        <legend><span class="step-number" aria-hidden="true">1</span> Which gem do you have?</legend>
+        <div class="gem-capsule">
+        <figure class="gem-preview" id="gem-preview"><div class="gem-canvas" id="gem-canvas" role="img" aria-label="3D gemstone preview"><p id="gem-loading">Loading gemstone…</p></div><figcaption id="gem-caption">Choose a gem to see its colour</figcaption></figure>
+      <div class="step weight-step">
+        <label class="step-heading" for="weight"><span class="step-number" aria-hidden="true">2</span> How much does it weigh?</label>
+        <div class="carat-picker"><input id="weight" name="weight" type="hidden" value="0.00"><div class="carat-wheels" role="group" aria-label="Weight in carats"><div id="carat-whole" class="carat-wheel" role="spinbutton" tabindex="0" aria-label="Whole carats" aria-valuemin="0" aria-valuemax="99" aria-valuenow="0" aria-describedby="weight-help weight-error"></div><span class="carat-dot" aria-hidden="true">.</span><div id="carat-fraction" class="carat-wheel" role="spinbutton" tabindex="0" aria-label="Hundredths of a carat" aria-valuemin="0" aria-valuemax="99" aria-valuenow="0" aria-describedby="weight-help weight-error"></div></div><span class="carat-unit">carats</span><p class="carat-instruction">Scroll each column to set the weight</p></div>
+        <p class="field-error" id="weight-error" hidden>Enter a weight greater than 0 carats, using numbers only.</p>
+        <p class="hint" id="weight-help">Look for “ct” on your scale or gem report.<br>Example: 2 ct means 2 carats.</p>
+      </div>
+        <div class="gem-grid">
+          <label class="gem-choice"><input type="radio" name="gem" value="sapphire"><span class="gem-symbol sapphire" aria-hidden="true"></span><span>Sapphire</span><span class="selected-tick" aria-hidden="true">✓</span></label>
+          <label class="gem-choice"><input type="radio" name="gem" value="ruby"><span class="gem-symbol ruby" aria-hidden="true"></span><span>Ruby</span><span class="selected-tick" aria-hidden="true">✓</span></label>
+          <label class="gem-choice"><input type="radio" name="gem" value="emerald"><span class="gem-symbol emerald" aria-hidden="true"></span><span>Emerald</span><span class="selected-tick" aria-hidden="true">✓</span></label>
+          <label class="gem-choice"><input type="radio" name="gem" value="other"><span class="gem-symbol other" aria-hidden="true"></span><span>Other gem</span><span class="selected-tick" aria-hidden="true">✓</span></label>
+        </div>
+        </div>
+        <p class="field-error" id="gem-error" hidden>Choose the gem you have.</p>
+        <div class="additional-field" id="other-gem-field" hidden><select id="other-gem" name="otherGem" hidden aria-label="Other gemstone"><option value="">Choose a gem</option><option value="spinel">Spinel</option><option value="tourmaline">Tourmaline</option><option value="garnet">Garnet</option><option value="aquamarine">Aquamarine</option><option value="amethyst">Amethyst</option><option value="citrine">Citrine</option><option value="topaz">Topaz</option><option value="zircon">Zircon</option><option value="peridot">Peridot</option><option value="unknown">I do not know</option></select><button type="button" id="choose-other-gem" class="secondary-button" aria-haspopup="dialog">Choose another gemstone</button><p class="field-error" id="other-error" hidden>Choose a gem, or select “I do not know”.</p></div>
+      </fieldset>
+      <fieldset class="step treatment-step">
+        <legend><span class="step-number" aria-hidden="true">3</span> Does the report show heat treatment?</legend>
+        <div class="treatment-options">
+          <label class="treatment-choice"><input type="radio" name="treatment" value="heated"><span class="treatment-icon heated-icon" aria-hidden="true"></span><span><strong>Heated</strong></span></label>
+          <label class="treatment-choice"><input type="radio" name="treatment" value="unheated"><span class="treatment-icon unheated-icon" aria-hidden="true"></span><span><strong>Unheated</strong></span></label>
+          <label class="treatment-choice"><input type="radio" name="treatment" value="unknown" checked><span class="treatment-icon unknown-icon" aria-hidden="true"></span><span><strong>I do not know</strong></span></label>
+        </div>
+        <p class="field-error" id="treatment-error" hidden>Choose an option. “I do not know” is OK.</p>
+      </fieldset>
+      <details class="more-details" id="more-details">
+        <summary><span><strong>Add more gem details</strong><small>Colour, marks inside &amp; how it sparkles</small></span><span class="disclosure" aria-hidden="true">+</span></summary>
+        <div class="details-content">
+          <p class="hint">Only choose details you know. Screen colours cannot grade a gem.</p>
+          <div class="additional-field" id="sapphire-colour-field"><label for="sapphire-colour">Sapphire colour</label><select id="sapphire-colour" name="sapphireColour"><option value="unknown">I do not know</option><option value="blue">Blue</option><option value="other">Another colour</option></select></div>
+          <select id="colour" name="colour" hidden aria-label="Colour strength"><option value="unknown">I do not know</option><option value="light">Light</option><option value="medium">Medium</option><option value="deep">Deep</option></select>
+          <label for="clarity">Can you see marks inside the gem?</label><select id="clarity" name="clarity"><option value="unknown">I do not know</option><option value="clean">No visible marks</option><option value="included">Yes, visible marks</option></select>
+          <label for="cut">How does it sparkle in the light?</label><select id="cut" name="cut"><option value="unknown">I do not know</option><option value="good">Bright and sparkly</option><option value="fair">Some dull areas</option></select>
+          <p class="hint">Other treatments, such as filling or oiling, also matter. This demo covers heat treatment only and cannot value gems with other treatments.</p>
+        </div>
+      </details>
+      <p class="hint optional-hint">Use this section only for details you know.</p>
+      <button class="primary-button" type="submit">Calculate estimate <span aria-hidden="true">↓</span></button>
+    </form>
+    <section class="result-section" id="result" aria-labelledby="result-heading" hidden>
+      <h2 id="result-heading" tabindex="-1">Your estimate</h2>
+      <div class="price-card" id="price-card"><p class="price-label" id="price-label"></p><p class="price-value" id="price-value"></p><p class="price-caption">Illustrative price range</p><p class="per-carat" id="per-carat"></p></div>
+      <div class="unknown-card" id="unknown-card" hidden><h3 id="unknown-title">A few more details are needed</h3><p id="unknown-message"></p><button class="secondary-button" type="button" id="update-details">Update gem details ↑</button></div>
+      <p class="result-summary" id="result-summary"></p>
+      <p class="hint result-disclaimer">This is a demo, not a promised selling price.<br>A gem expert can check the real value.</p>
+      <details class="calculation-note"><summary>How this sample works <span aria-hidden="true">+</span></summary><p>This demo uses a made-up price band of USD 400–600 per carat for a blue, heated sapphire with medium colour, no visible marks and good sparkle. Total = sample price per carat × weight. These numbers are not market data. Other gems or unknown details need professional advice.</p></details>
+    </section>
+    <p class="screen-reader-only" id="announcement" role="status" aria-live="polite"></p>
+    <button class="secondary-button reset-button" type="button" id="reset-button">Start again</button>
+    <noscript><p class="demo-note">Please enable JavaScript to use this calculator.</p></noscript>
+  </main>
+  <dialog id="other-gems-dialog" aria-labelledby="other-gems-title"><div class="dialog-header"><h2 id="other-gems-title">Choose your gemstone</h2><button type="button" id="close-other-gems" class="close-button" aria-label="Close gemstone picker">×</button></div><p>Select the name shown on your gem report.</p><div class="other-gem-options"><button type="button" data-gem="ruby">Ruby</button><button type="button" data-gem="sapphire">Sapphire</button><button type="button" data-gem="emerald">Emerald</button><button type="button" data-gem="other">Other gem</button><button type="button" data-gem="spinel"><span class="gem-symbol ruby" aria-hidden="true"></span>Spinel</button><button type="button" data-gem="tourmaline"><span class="gem-symbol emerald" aria-hidden="true"></span>Tourmaline</button><button type="button" data-gem="garnet"><span class="gem-symbol ruby" aria-hidden="true"></span>Garnet</button><button type="button" data-gem="aquamarine">Aquamarine</button><button type="button" data-gem="amethyst">Amethyst</button><button type="button" data-gem="citrine">Citrine</button><button type="button" data-gem="topaz">Topaz</button><button type="button" data-gem="zircon">Zircon</button><button type="button" data-gem="peridot">Peridot</button><button type="button" data-gem="unknown">I do not know</button></div></dialog>
+  <dialog id="help-dialog" aria-labelledby="help-title"><div class="dialog-header"><h2 id="help-title">A little help</h2><button type="button" id="close-help" class="close-button" aria-label="Close help">×</button></div><p>Choose your gem, enter its weight in carats, and select the treatment shown on your gem report.</p><p>If you are unsure, choose “I do not know”. We will never fill in missing details for you.</p><p>The sample price is a learning example, not a professional valuation. No information is sent to a server.</p><button type="button" class="primary-button" id="try-example">Try a filled-in example</button></dialog>
+</body>
+</html>

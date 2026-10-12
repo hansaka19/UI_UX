@@ -1,0 +1,127 @@
+/* Cool blue / ivory component system approved from the user's reference. */
+:root{--green:#24556b;--ink:#173c4c;--muted:#526d79;--background:#eaf2f3;--line:#cddde2;--selected:#d9e9ee;--radius:18px}
+html{background:#eaf2f3}body{min-height:100dvh;background:radial-gradient(ellipse at 0 20%,#c7dee5 0,transparent 52%),radial-gradient(ellipse at 100% 60%,#d1e4e7 0,transparent 45%),#eef4f3;font-family:Arial,sans-serif}.app{max-width:480px;padding:28px 22px 40px}.header{margin-bottom:32px}.brand{font-weight:600;letter-spacing:-.7px}.brand-mark{background:#24556b;color:white;border-radius:10px}.help-button,.close-button{background:#ffffffc9;border-color:#d7e4e7;color:#24556b;border-radius:999px;padding:9px 18px;font-size:14px;box-shadow:0 4px 12px #365c6b08}h1{font-size:34px;font-weight:500;letter-spacing:-1.2px;line-height:1.15}.intro>p{line-height:1.65}.intro .demo-note{background:#ffffff95;color:#426673;border:1px solid #d7e4e7;border-radius:12px;padding:10px 14px;font-size:13px;margin-top:20px}.step{margin-top:26px}.step legend,.step-heading{font-size:17px;font-weight:500;gap:10px}.step-number{background:#ffffffab;border:1px solid #c9dce2;color:#2b6175;border-radius:50%;font-size:13px;width:28px;height:28px}
+.gem-preview{background:linear-gradient(150deg,#ffffffea,#e2edf0);border:1px solid #ffffff;border-radius:24px;box-shadow:0 12px 30px #3c627410,inset 0 1px 0 white;margin-bottom:18px;position:relative;isolation:isolate;overflow:hidden;padding-top:14px}.gem-preview:before{content:none}.gem-canvas{height:220px;width:220px;margin:0 auto;border-radius:50%;background:radial-gradient(circle at 35% 25%,#dcebee,#90b4c4 62%,#527b90);border:5px solid #f4f9f9;box-shadow:0 0 0 1px #bed3db,inset 0 4px 14px #23495e22;overflow:hidden}.gem-canvas canvas{border-radius:50%}.gem-preview figcaption{color:#365b6b;padding:18px 12px;font-size:13px}.gem-grid{gap:10px}.gem-choice{background:#ffffffd9;border:1px solid #d2e1e5;border-radius:999px;min-height:58px;padding:16px 14px;font-size:15px;font-weight:500;box-shadow:0 5px 12px #45687706}.gem-choice:hover{background:white}.gem-choice:has(input:checked){background:linear-gradient(135deg,#366d82,#214d63);border-color:#24556b;color:white;box-shadow:0 6px 16px #214d6322}.selected-tick{color:#e3f5fb;right:12px;top:8px}.gem-symbol{width:16px;height:21px}.gem-choice:has(input:checked) .gem-symbol{filter:brightness(1.45)}
+.weight-control{position:relative;display:flex;align-items:flex-end;min-height:125px;padding:20px 20px 18px;background:linear-gradient(155deg,#fff,#f4f8f8);border:1px solid #ffffff;border-radius:22px;box-shadow:0 10px 24px #355d7110}.weight-control input{padding:0;min-width:0;font-size:52px;line-height:1.1;font-weight:400;letter-spacing:-2px;color:#204b60}.weight-control input::placeholder{font-size:32px;letter-spacing:-1px;color:#8aa1ab}.weight-control span{padding-bottom:7px;margin-left:10px;color:#527585;font-size:14px}.hint{font-size:14px;line-height:1.6}.treatment-hint{margin-top:0}.treatment-options{gap:10px}.treatment-choice{background:#ffffffd9;border-color:#d7e5e8;border-radius:18px;min-height:74px;box-shadow:0 6px 15px #365c6b06}.treatment-choice strong{font-size:15px;font-weight:500}.treatment-choice small{font-size:13px;color:#5a7682}.treatment-choice:has(input:checked){background:#d9e9ee;border-color:#749daa}.radio-mark{background:white;border-color:#83a3af}.treatment-choice:has(input:checked) .radio-mark:after{background:#24556b}.more-details{background:#ffffffdf;border-color:#d5e3e7;border-radius:20px;box-shadow:0 8px 20px #365c6b08}.more-details summary strong{font-size:16px;font-weight:500}.more-details summary small{font-size:13px}.details-content{border-color:#d6e3e7}.details-content label,.additional-field>label{font-weight:500}.details-content select,.additional-field select{background:#f2f7f7;border-color:#c8dce3;border-radius:12px;font-size:16px;color:#224e60}.primary-button{background:linear-gradient(120deg,#356b80,#214b61);color:white;border-radius:999px;font-size:16px;min-height:56px;font-weight:500;box-shadow:0 8px 20px #214b6120}.primary-button:hover{background:#183f53}.secondary-button{background:#ffffffd9;border-color:#cbdde3;border-radius:999px;font-size:15px;font-weight:500;color:#24556b}.secondary-button:hover{background:#dcebf0}
+.result-section{padding:24px;background:#ffffffd9;border:1px solid white;border-radius:26px;box-shadow:0 14px 35px #365c6b10;margin-top:28px}h2{font-size:23px;font-weight:500}.price-card{background:radial-gradient(ellipse at 0 0,#4c8397,transparent 70%),linear-gradient(145deg,#275d73,#143c50);border:1px solid #2c6076;color:white;border-radius:22px;padding:25px 20px;box-shadow:0 12px 24px #1b4c6422}.price-label{color:#d0e6ed;font-size:11px;letter-spacing:1px}.price-value{font-weight:400;color:white;letter-spacing:-1px}.price-caption{color:#d4e7ed;font-size:14px}.per-carat{border-color:#a1c7d44d;color:#e9f4f7;font-size:15px;font-weight:400}.result-summary{font-size:13px;line-height:1.6;color:#486b7c}.result-disclaimer{font-size:13px}.unknown-card{background:#f6f0df;border-color:#e0d3af;color:#6c572b}.unknown-card h3{font-weight:500}.calculation-note{border-color:#d1e0e5}.calculation-note summary{color:#24556b;font-weight:400}.reset-button{margin-top:22px;min-height:48px}.field-error{color:#a32420}.weight-control:has(input[aria-invalid=true]){border-color:#b02e29}button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,.gem-choice:has(input:focus-visible),.treatment-choice:has(input:focus-visible),.weight-control:focus-within{outline-color:#267595}dialog{background:#f3f8f8;border-color:#c0d6df;box-shadow:0 30px 100px #153d5544}dialog::backdrop{background:#183f5366;backdrop-filter:blur(5px)}#gem-loading{color:#234c60}
+@media(min-width:800px){.app{max-width:1040px;padding:36px 48px 56px}.header{margin-bottom:40px}.intro{max-width:510px;margin-bottom:32px}h1{font-size:44px}.intro>p{font-size:16px}.intro .demo-note{max-width:380px}#calculator{display:grid;grid-template-columns:1fr 1fr;gap:20px 32px;align-items:start}#calculator>.step:first-child{grid-column:1;grid-row:1 / 5;margin:0;padding:24px;background:#ffffffb0;border:1px solid white;border-radius:30px;box-shadow:0 18px 40px #345e7010}#calculator>.step:first-child legend{float:left;margin-bottom:20px}#calculator>.step:first-child .gem-preview{clear:both}.gem-canvas{width:250px;height:250px}.weight-step{grid-column:2;grid-row:1;margin:0}.treatment-step{grid-column:2;grid-row:2;margin:0}.more-details{grid-column:2;grid-row:3;margin:0}.optional-hint{grid-column:2;grid-row:4;margin:0}#calculator>.primary-button{grid-column:2;grid-row:5;margin:0}.result-section{display:grid;grid-template-columns:1fr 1fr;gap:0 28px;margin-top:32px}.result-section h2{grid-column:1 / -1}.price-card,.unknown-card{grid-column:1;grid-row:2 / 5}.result-summary,.result-disclaimer,.calculation-note{grid-column:2}.result-summary{margin-top:0}.reset-button{width:180px;display:block;margin:24px auto 0}}
+@media(max-width:375px){.app{padding:20px 16px 28px}.header{margin-bottom:26px}h1{font-size:30px}.gem-canvas{width:200px;height:200px}.gem-choice{padding:16px 10px;gap:8px;font-size:14px}.step legend,.step-heading{font-size:16px}.result-section{padding:18px}.price-value{font-size:27px}.weight-control input{font-size:46px}.weight-control{padding:18px 16px;min-height:110px}.more-details summary small{font-size:12px}.intro .demo-note{font-size:12px}.primary-button{font-size:16px}}
+/* User's capsule sketch: circle, editable carats and gem names together. */
+html,body{background:#fff}
+.app{max-width:480px}
+.header{justify-content:flex-end;margin-bottom:60px}
+.brand{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.intro{text-align:center;margin-left:auto;margin-right:auto}
+h1{font-size:28px;font-weight:600;letter-spacing:-.7px}
+.intro>p{font-size:15px}
+.intro .demo-note{margin:20px auto 0;font-size:12px;max-width:310px}
+#calculator>.step:first-child{border:0;box-shadow:none;background:none;padding:0;margin-top:38px}
+#calculator>.step:first-child legend{float:none;justify-content:center;font-weight:600;font-size:18px;text-align:center;margin-bottom:16px}
+#calculator>.step:first-child legend .step-number{display:none}
+.gem-capsule{width:216px;margin:0 auto;background:#a0a5a3;border-radius:110px;padding:24px 20px 28px;color:#193d32}
+.gem-preview{padding:0;border:0;background:none;box-shadow:none;border-radius:0;margin:0}
+.gem-canvas{width:176px;height:176px;border:0;background:#d9dddb;box-shadow:none;border-radius:50%;overflow:hidden}
+.gem-preview figcaption{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);padding:0}
+.weight-step{margin:14px 0 18px}
+.weight-step .step-heading,.weight-step .hint{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);margin:0}
+.weight-control{display:flex;flex-direction:column;align-items:center;padding:0;min-height:78px;border:0;background:none;box-shadow:none;border-radius:10px}
+.weight-control input{padding:0;width:100%;text-align:center;font-size:48px;line-height:1.2;font-weight:600;letter-spacing:-1px;color:#193d32}
+.weight-control input::placeholder{font-size:40px;color:#254e41}
+.weight-control span{padding:0;margin:0;font-size:14px;color:#294e42}
+.gem-grid{display:flex;flex-direction:column;gap:0}
+.gem-choice{min-height:44px;padding:5px 0;justify-content:center;border:0;box-shadow:none;background:none;border-radius:10px;color:#345249;font-size:22px;font-weight:600;line-height:1.2}
+.gem-choice:has([value=ruby]){order:0}.gem-choice:has([value=sapphire]){order:1}.gem-choice:has([value=emerald]){order:2}.gem-choice:has([value=other]){order:3;font-size:16px}
+.gem-choice .gem-symbol,.gem-choice .selected-tick{display:none}
+.gem-choice:has(input:checked){background:none;box-shadow:none;border:0;color:#123b2e;font-size:26px;font-weight:700}
+.gem-choice:hover{background:#ffffff18}
+@media(min-width:800px){#calculator{grid-template-columns:1fr 1fr}#calculator>.step:first-child{grid-column:1;grid-row:1 / 5;margin-top:0}.treatment-step{grid-row:1}.more-details{grid-row:2}.optional-hint{grid-row:3}#calculator>.primary-button{grid-row:4}.intro{margin-bottom:40px}.gem-canvas{width:176px;height:176px}h1{font-size:32px}}
+@media(max-width:375px){h1{font-size:26px}.gem-canvas{width:176px;height:176px}.gem-choice{font-size:22px;padding:5px 0}.weight-control input{font-size:48px}.weight-control{padding:0;min-height:78px}.gem-preview figcaption{padding:0}}
+.gem-choice input:checked~.selected-tick{display:none}
+/* Alarm-style wheel: each 44px row snaps into the middle selection band. */
+.gem-grid.gem-wheel{display:block;height:132px;overflow-y:auto;overscroll-behavior-y:contain;scroll-snap-type:y mandatory;scrollbar-width:none;padding:44px 0;position:relative;touch-action:pan-y;mask-image:linear-gradient(transparent,#000 25%,#000 75%,transparent);background:linear-gradient(transparent 43px,#ffffff25 44px,#ffffff25 45px,transparent 46px,transparent 86px,#ffffff25 87px,#ffffff25 88px,transparent 89px);background-attachment:local}
+.gem-wheel::-webkit-scrollbar{display:none}
+.gem-grid.gem-wheel .gem-choice{display:flex;height:44px;min-height:44px;max-height:44px;margin:0;padding:0;scroll-snap-align:center;scroll-snap-stop:always;border-radius:0;font-size:21px;font-weight:500;opacity:.6;line-height:44px}
+.gem-grid.gem-wheel .gem-choice.wheel-selected{font-size:25px;font-weight:700;opacity:1;color:#123b2e;background:none;box-shadow:none}
+.wheel-hint{text-align:center;font-size:11px;color:#234a3f;margin:12px -6px 0}
+.gem-grid.gem-wheel{background-attachment:scroll}
+.carat-picker{text-align:center;margin:14px 0 18px}
+.carat-wheels{display:flex;align-items:center;justify-content:center;gap:3px}
+.carat-wheel{height:132px;width:72px;padding:44px 0;overflow-y:auto;scroll-snap-type:y mandatory;overscroll-behavior-y:contain;scrollbar-width:none;touch-action:pan-y;mask-image:linear-gradient(transparent,#000 30%,#000 70%,transparent)}
+.carat-wheel::-webkit-scrollbar{display:none}
+.carat-row{height:44px;line-height:44px;scroll-snap-align:center;scroll-snap-stop:always;font-size:30px;font-weight:500;color:#345249;opacity:.45;cursor:pointer;font-variant-numeric:tabular-nums}
+.carat-row.carat-selected{font-size:37px;font-weight:700;opacity:1;color:#193d32}
+.carat-dot{font-size:32px;font-weight:700;color:#193d32;line-height:1}
+.carat-unit{display:block;font-size:14px;color:#294e42;margin-top:4px}
+.carat-instruction{font-size:10px;color:#234a3f;margin:6px -12px 0}
+.carat-wheel:focus-visible{outline:2px solid #267595;outline-offset:1px}
+.carat-editor{position:relative;min-height:132px;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;padding:28px 0}
+#carat-entry{width:120px;min-width:0;border:0;border-bottom:2px solid #345249;border-radius:0;background:transparent;text-align:center;color:#193d32;font-size:32px;font-weight:700;font-variant-numeric:tabular-nums;padding:6px 0}
+.carat-done{background:#234e40;border:0;color:white;border-radius:12px;font-size:14px;min-height:44px;padding:8px 10px}
+#carat-entry-error{width:100%;margin:8px 0 0;font-size:12px;line-height:1.4;color:#681d18}
+/* Each wheel edits in its own center slot, without changing the layout. */
+.carat-slot{position:relative;width:72px;height:132px;flex:none}
+.carat-inline-input{position:absolute;top:44px;left:0;width:72px;height:44px;padding:0;border:0;border-radius:5px;background:#a0a5a3;color:#193d32;text-align:center;font-family:inherit;font-size:37px;font-weight:700;line-height:44px;font-variant-numeric:tabular-nums;z-index:2}
+.carat-inline-input:focus{outline:1px solid #345249;outline-offset:0}
+.carat-editing .carat-selected{visibility:hidden}
+/* Frosted glass surfaces, with an opaque fallback for older browsers. */
+html{background:#edf3f2}
+body{background:radial-gradient(ellipse at 5% 25%,#c7dce2 0,transparent 50%),radial-gradient(ellipse at 95% 70%,#d4e2dc 0,transparent 45%),#f4f7f5}
+.gem-capsule{background:linear-gradient(145deg,#ffffffb3,#b8ceca69);border:1px solid #ffffffd9;box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 #9bbab944,0 16px 40px #355f6818;backdrop-filter:blur(20px) saturate(125%);-webkit-backdrop-filter:blur(20px) saturate(125%)}
+.gem-canvas{background:radial-gradient(circle at 30% 20%,#ffffffc7,#c1d5d480 75%);border:1px solid #ffffffdf;box-shadow:inset 0 2px 12px #fff9,0 4px 14px #365e6010}
+.help-button,.secondary-button,.close-button,.treatment-choice,.more-details,.intro .demo-note{background:linear-gradient(140deg,#ffffffc4,#ffffff66);border:1px solid #ffffffdb;box-shadow:inset 0 1px 0 #fff,0 5px 18px #375f6a0c;backdrop-filter:blur(16px) saturate(120%);-webkit-backdrop-filter:blur(16px) saturate(120%)}
+.help-button:hover,.secondary-button:hover,.close-button:hover,.treatment-choice:hover{background:#ffffffe0;box-shadow:inset 0 1px 0 #fff,0 7px 20px #375f6a14}
+.treatment-choice:has(input:checked){background:linear-gradient(140deg,#cce2e8cf,#d8e9e99c);border-color:#7ba8b9;box-shadow:inset 0 1px 0 #ffffffb3,0 5px 18px #375f6a12}
+.primary-button{background:linear-gradient(140deg,#39788be0,#1f5068db);border:1px solid #ffffff70;box-shadow:inset 0 1px 0 #ffffff66,inset 0 -1px 0 #123c5b33,0 8px 24px #214b6126;backdrop-filter:blur(16px) saturate(125%);-webkit-backdrop-filter:blur(16px) saturate(125%);color:#fff}
+.primary-button:hover{background:linear-gradient(140deg,#36748bef,#1b465ef0)}
+.result-section{background:linear-gradient(140deg,#ffffffc9,#ffffff73);border:1px solid #fff;box-shadow:inset 0 1px 0 white,0 14px 35px #365c6b12;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.price-card{background:linear-gradient(140deg,#386f85e6,#153e53e8);border:1px solid #ffffff60;box-shadow:inset 0 1px 0 #ffffff55,0 10px 25px #1b4c6420;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.carat-inline-input{background:#edf5f2a6;border:1px solid #7d9e95;box-shadow:inset 0 1px 0 #fff;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.gem-grid.gem-wheel{background-image:linear-gradient(transparent 43px,#ffffff85 44px,#ffffff85 45px,transparent 46px,transparent 86px,#ffffff85 87px,#ffffff85 88px,transparent 89px)}
+dialog{background:#f2f7f6ed;backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border:1px solid #fff}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.gem-capsule{background:#d8e4df}.help-button,.secondary-button,.treatment-choice,.more-details,.result-section{background:#f1f6f4}.primary-button,.price-card{background:#24556b}}
+@media(prefers-reduced-transparency:reduce){.gem-capsule{background:#d8e4df}.help-button,.secondary-button,.treatment-choice,.more-details,.result-section{background:#f1f6f4;backdrop-filter:none;-webkit-backdrop-filter:none}.primary-button,.price-card{background:#24556b;backdrop-filter:none;-webkit-backdrop-filter:none}}
+.carat-picker>.carat-instruction{margin:0 -12px 8px}
+.carat-picker>.wheel-hint{margin:12px -6px 0}
+#other-gems-dialog{border-radius:26px;padding:24px;background:#f4f9f6ee;border:1px solid #fff;box-shadow:0 25px 80px #1e444b44}
+#other-gems-dialog::backdrop{background:#173c4c45;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.other-gem-options{display:grid;gap:12px;margin-top:20px}
+.other-gem-options button{display:flex;align-items:center;gap:14px;min-height:56px;background:#ffffffa6;color:#173c4c;border:1px solid #ffffffed;border-radius:16px;padding:14px 18px;text-align:left;box-shadow:inset 0 1px 0 white,0 4px 12px #375f6a0c}
+.other-gem-options button:hover,.other-gem-options button[aria-pressed=true]{background:#d9e9ee;border-color:#749daa}
+#other-gem-field{max-width:260px;margin:16px auto 0}
+.other-gem-options.other-gem-wheel{display:block;height:168px;padding:56px 0;margin-top:24px;overflow-y:auto;scroll-snap-type:y mandatory;overscroll-behavior-y:contain;touch-action:pan-y;scrollbar-width:none;mask-image:linear-gradient(transparent,#000 28%,#000 72%,transparent);background:linear-gradient(transparent 55px,#b5ccd580 56px,transparent 57px,transparent 111px,#b5ccd580 112px,transparent 113px)}
+.other-gem-wheel::-webkit-scrollbar{display:none}
+.other-gem-options.other-gem-wheel button{width:100%;height:56px;min-height:56px;max-height:56px;display:flex;justify-content:center;padding:0 8px;border:0;box-shadow:none;background:none;border-radius:0;font-size:21px;opacity:.5;scroll-snap-align:center;scroll-snap-stop:always}
+.other-gem-options.other-gem-wheel .gem-symbol{display:none}
+.other-gem-options.other-gem-wheel button.other-wheel-selected{opacity:1;font-weight:700;font-size:25px;color:#173c4c;background:none;border:0}
+.other-wheel-hint{text-align:center!important;font-size:13px!important;margin:14px 0 0!important}
+/* Sketch-style expanded selection: floating names over the blurred page. */
+#other-gems-dialog{width:250px;max-width:calc(100% - 32px);padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;overflow:visible}
+#other-gems-dialog::backdrop{background:#e9ecebb5;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+#other-gems-dialog .dialog-header,#other-gems-dialog>p,#other-gems-dialog .other-wheel-hint,#confirm-other-gem{display:none}
+#other-gems-dialog .other-gem-wheel{height:224px;padding:84px 0;margin:0;background:none;border:0;box-shadow:none;outline:none;mask-image:linear-gradient(transparent,#000 18%,#000 82%,transparent)}
+#other-gems-dialog .other-gem-wheel button{color:#36554b;font-size:24px;opacity:.6;font-weight:600}
+#other-gems-dialog .other-gem-wheel .other-wheel-selected{color:#153c2f;font-size:29px;opacity:1;font-weight:700}
+#other-gems-dialog [data-gem=other]{font-size:16px}
+#other-gems-dialog #confirm-other-gem{display:flex;width:180px;margin:24px auto 0;min-height:50px;justify-content:center;background:linear-gradient(140deg,#ffffffad,#ffffff52);color:#173c4c;border:1px solid #ffffffed;border-radius:999px;box-shadow:inset 0 1px 0 #fff,0 8px 24px #315a6518;backdrop-filter:blur(16px) saturate(130%);-webkit-backdrop-filter:blur(16px) saturate(130%);font-weight:600}
+#other-gems-dialog #confirm-other-gem:hover{background:#ffffffcf}
+/* Screenshot match: four main names, soft grey frosted page and a grey glass Done pill. */
+#other-gems-dialog::backdrop{background:#e6e8e7cc;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+#other-gems-dialog .other-gem-wheel{height:230px;padding:92px 0;mask-image:linear-gradient(transparent,#000 22%,#000 72%,#000a 90%,transparent)}
+#other-gems-dialog .other-gem-wheel button{height:46px;min-height:46px;max-height:46px;color:#56645f;font-size:23px;font-weight:700;opacity:.85}
+#other-gems-dialog .other-gem-wheel .other-wheel-selected{color:#1b382f;font-size:28px;opacity:1}
+#other-gems-dialog .other-gem-wheel [data-gem=other]{font-size:16px}
+#other-gems-dialog #confirm-other-gem{width:112px;height:40px;min-height:0;padding:0 18px;margin:44px auto 0;background:linear-gradient(180deg,#dcdedd,#c8cbca);color:#111;border:1px solid #ffffffb3;box-shadow:inset 0 1px 0 #ffffffcc,0 6px 18px #2c38341f;font-size:15px;font-weight:400}
+#other-gems-dialog #confirm-other-gem:hover{background:linear-gradient(180deg,#e4e6e5,#d2d5d4)}
+
+/* Reference composition: the picker sits in the upper third, not modal center. */
+#other-gems-dialog{--picker-row:clamp(36px,12.72vw,46px);position:fixed;top:20.1vh;bottom:auto;margin:0 auto;left:0;right:0;width:250px}
+#other-gems-dialog::backdrop{background:rgba(229,229,229,.86);backdrop-filter:blur(16px) grayscale(1);-webkit-backdrop-filter:blur(16px) grayscale(1)}
+#other-gems-dialog .other-gem-wheel{height:calc(var(--picker-row)*5);padding:calc(var(--picker-row)*2) 0;mask-image:linear-gradient(transparent,#000 22%,#000 70%,#0009 90%,transparent)}
+#other-gems-dialog .other-gem-wheel button{height:var(--picker-row);min-height:var(--picker-row);max-height:var(--picker-row);font-size:clamp(20px,7.07vw,25px);color:#61716b}
+#other-gems-dialog .other-gem-wheel .other-wheel-selected{font-size:clamp(23px,8.13vw,29px);color:#193a30}
+#other-gems-dialog .other-gem-wheel [data-gem=emerald]{font-size:clamp(17px,6vw,22px)}
+#other-gems-dialog .other-gem-wheel [data-gem=other]{font-size:clamp(12px,4.24vw,16px)}
+#other-gems-dialog #confirm-other-gem{width:clamp(89px,31.45vw,120px);height:clamp(38px,13.42vw,48px);margin:calc(var(--picker-row)*1.02) auto 0;font-size:clamp(12px,4.24vw,15px);background:linear-gradient(155deg,#dadbdacc,#c7c9c8d9);box-shadow:inset 0 1px 0 #ffffff88,0 4px 10px #202b2826}
+/* Give the reference's blurred capsule a visible silhouette beneath the frost. */
+body:has(#other-gems-dialog[open]) .gem-capsule{background:#999;border-color:transparent;box-shadow:none}
+#other-gems-dialog::backdrop{background:rgba(229,229,229,.70)}
