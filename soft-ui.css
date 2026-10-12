@@ -122,5 +122,5 @@ button:focus-visible,input:focus-visible,select:focus-visible,.carat-wheel:focus
 .gem-wheel .wheel-placeholder{height:44px}
 .treatment-wheel .wheel-placeholder{height:var(--treatment-row);font-size:17px}
 
-/* Leave space below the bottom-facing colour handle. */
-.colour-ring-readout{margin-top:30px}
+/* Mirrored handles stay at the sides of the gem. */
+.colour-ring-readout{margin-top:18px}
